@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/element_corners_top"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:id="@+id/toolbar"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="20dp"
+
+                >
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/icon_example"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/message_me_throw"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_message_me"
+                android:layout_marginStart="130dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gradient_blue"
+                android:padding="8dp"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/message_me_throw"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/semibold"
+                android:text="304"
+                android:background="@drawable/gradient_blue"
+                android:textColor="@color/white"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+
+                />
+
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_close"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/information"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:fontFamily="@font/bold"
+                android:text="Светлана Николаевна"
+                android:textColor="@color/background_black"
+
+                />
+            <TextView
+                android:id="@+id/person_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_name"
+                android:textSize="14dp"
+                android:fontFamily="@font/semibold"
+                android:text="Учитель русского языка"
+                android:textColor="@color/hint_color"
+                />
+            <TextView
+                android:id="@+id/person_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_position"
+                android:textSize="14dp"
+                android:fontFamily="@font/semibold"
+                android:text="Вы можете связаться со мной с 8 до 18 часов. Вы можете найти меня в 304 кабинете."
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/date_container"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_below="@+id/information"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

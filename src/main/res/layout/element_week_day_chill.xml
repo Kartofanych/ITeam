@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="45dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="45dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:background="@drawable/gradient_red"
+        >
+        <TextView
+            android:id="@+id/week_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/blue_second"
+            android:text="ПН"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/week_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/white"
+            android:text="31"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/week_day"
+            android:textSize="16dp"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/arrow_today"
+        android:layout_below="@+id/main"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_arrow_up"
+        app:tint="@color/blue_main"
+        android:visibility="invisible"/>
+</RelativeLayout>

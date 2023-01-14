@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventProfileActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="event_transition">
+
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/event_image"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/event_example"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/oneCorned"
+
+                />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/toolbar"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/gradient_reversed"
+            android:backgroundTint="#6533357D"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp">
+                <RelativeLayout
+                    android:id="@+id/image_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="26dp">
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:background="@color/white"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_example" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/image_rel"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="10dp">
+                    <TextView
+                        android:id="@+id/event_creator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Светлана Николаевна"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+
+                        />
+                    <TextView
+                        android:id="@+id/event_creator_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Учитель русского языка"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="#CACACA"
+                        android:textSize="12dp"
+                        android:layout_below="@+id/event_creator"
+
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingVertical="20dp"
+                android:layout_below="@+id/event_image"
+                >
+
+                <TextView
+                    android:id="@+id/event_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Пятница, 23 Декабря, 18:00"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="#555663"
+                    android:textSize="16dp"
+
+                    />
+                <TextView
+                    android:id="@+id/event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/event_date"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/image_people"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/event_title"
+                    android:src="@drawable/icon_group_people"
+                    app:tint="@color/pink"
+                    android:layout_marginTop="20dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/event_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="5 присоединились"
+                    android:fontFamily="@font/semibold"
+                    android:textSize="13dp"
+                    android:textColor="@color/pink"
+                    android:layout_below="@+id/event_title"
+                    android:layout_toEndOf="@+id/image_people"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/event_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Information"
+                    android:fontFamily="@font/regular"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/event_people"
+                    android:layout_marginTop="10dp"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_info"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="40dp">
+                <com.smb.glowbutton.GlowButton
+                    android:id="@+id/come_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:gb_text="Я приду!"
+                    app:gb_fontFamily="@font/semibold"
+                    app:gb_textColor="@color/white"
+                    app:gb_textSize="16dp"
+                    app:gb_backgroundColor="@color/pink"
+                    app:gb_cornerRadius="15dp"
+                    app:gb_disabledTextColor="@color/white"
+                    app:gb_glowAnimationDuration="500"
+                    app:gb_glowColor="@color/pink"
+                    app:gb_rippleAnimationDuration="1500"
+                    app:gb_rippleColor="@color/purple_200"
+                    app:gb_rippleEnabled="true"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            android:src="@drawable/icon_close"
+            android:layout_margin="20dp"
+            app:tint="@color/white"/>
+
+</RelativeLayout>

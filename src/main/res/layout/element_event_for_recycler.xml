@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="10dp"
+    android:transitionName="event_transition">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_images"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/event_example"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_images"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пятница, 23 Декабря, 18:00"
+            android:fontFamily="@font/semibold"
+            android:textColor="#555663"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_below="@+id/event_date"
+
+            />
+
+        <ImageView
+            android:id="@+id/image_people"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/event_title"
+            android:src="@drawable/icon_group_people"
+            app:tint="@color/pink"
+
+            />
+
+        <TextView
+            android:id="@+id/event_people"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:text="5 присоединились"
+            android:fontFamily="@font/semibold"
+            android:textSize="13dp"
+            android:textColor="@color/pink"
+            android:layout_below="@+id/event_title"
+            android:layout_toEndOf="@+id/image_people"
+            android:layout_marginStart="5dp"
+
+
+            />
+
+    </RelativeLayout>
+    
+</RelativeLayout>
