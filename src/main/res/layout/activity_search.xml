@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:paddingHorizontal="20dp">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/element_edit_field"
+        android:backgroundTint="@color/grey"
+        android:transitionName="search_transition"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/search_field"
+            android:background="@drawable/element_edit_field"
+            android:backgroundTint="@color/grey"
+            android:hint="Найди все что хочешь"
+            android:layout_toStartOf="@+id/search_icon"
+            android:paddingHorizontal="15dp"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:fontFamily="@font/semibold"
+            android:textColorHint="@color/hint_color"
+
+            />
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_search"
+            android:background="@drawable/gradient_blue"
+
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_teachers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+        <TextView
+            android:id="@+id/text_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Руководство и педагоги"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:paddingTop="20dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_teachers_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_personal"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_club"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_teachers">
+        <TextView
+            android:id="@+id/text_clubs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кружки"
+            android:fontFamily="@font/semibold"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:paddingTop="20dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_clubs_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_clubs"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

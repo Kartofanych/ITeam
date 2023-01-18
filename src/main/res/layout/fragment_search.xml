@@ -32,11 +32,13 @@
             android:background="@drawable/element_edit_field"
             android:backgroundTint="@color/grey"
             android:layout_marginHorizontal="20dp"
+            android:transitionName="search_transition"
             >
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/search_field"
+                android:gravity="center_vertical"
                 android:background="@drawable/element_edit_field"
                 android:backgroundTint="@color/grey"
                 android:hint="Найди все что хочешь"
@@ -46,8 +48,6 @@
                 android:textSize="15dp"
                 android:fontFamily="@font/semibold"
                 android:textColorHint="@color/hint_color"
-
-
 
                 />
             <ImageView

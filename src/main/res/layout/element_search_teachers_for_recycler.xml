@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp">
+        <RelativeLayout
+            android:id="@+id/image_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/blue_main"
+                    />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:id="@+id/teacher_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_example" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/image_rel"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="10dp">
+            <TextView
+                android:id="@+id/teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Светлана Николаевна"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+
+                />
+            <TextView
+                android:id="@+id/teacher_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Учитель русского языка"
+                android:fontFamily="@font/semibold"
+                android:textColor="#CACACA"
+                android:textSize="12dp"
+                android:layout_below="@+id/teacher_name"
+
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

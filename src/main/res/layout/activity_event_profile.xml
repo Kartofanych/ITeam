@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
+            android:id="@+id/animate_rel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:transitionName="event_transition">

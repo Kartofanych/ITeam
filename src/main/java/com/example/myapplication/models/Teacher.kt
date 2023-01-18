@@ -8,36 +8,10 @@ class Teacher {
     var info: String
     var workDays: Array<Boolean>
     var room: Int
+    var searchString: String
+    var lesson: String
+    var imageUrl: String
 
-    constructor(
-        name: String,
-        title: String,
-        telegramID: String,
-        info: String,
-        workDays: Array<Boolean>,
-        room: Int
-    ) {
-        this.name = name
-        this.title = title
-        this.telegramID = telegramID
-        this.info = info
-        this.workDays = workDays
-        this.room = room
-    }
-
-    constructor(name: String,
-                title: String,
-                number: Long,
-                info: String,
-                workDays: Array<Boolean>,
-                room: Int) {
-        this.name = name
-        this.title = title
-        this.number = number
-        this.info = info
-        this.workDays = workDays
-        this.room = room
-    }
 
     constructor(
         name: String,
@@ -46,7 +20,9 @@ class Teacher {
         number: Long,
         info: String,
         workDays: Array<Boolean>,
-        room: Int
+        room: Int,
+        lesson: String,
+        imageUrl: String
     ) {
         this.name = name
         this.title = title
@@ -55,7 +31,11 @@ class Teacher {
         this.info = info
         this.workDays = workDays
         this.room = room
+        this.lesson = lesson
+        this.searchString = name+lesson+room
+        this.imageUrl = imageUrl
     }
+
 
 
 }

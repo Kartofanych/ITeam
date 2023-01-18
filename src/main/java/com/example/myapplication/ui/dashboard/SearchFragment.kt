@@ -1,10 +1,13 @@
 package com.example.myapplication.ui.dashboard
 
 import android.app.ActionBar.LayoutParams
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Intent
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Bundle
+import android.util.Pair
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -16,15 +19,16 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentDashboardBinding
+import com.example.myapplication.SearchActivity
+import com.example.myapplication.databinding.FragmentSearchBinding
 import com.example.myapplication.models.Teacher
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import java.util.*
 
 
-class DashboardFragment : Fragment() {
+class SearchFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentSearchBinding? = null
 
     lateinit var connectTeacher : TextView
     lateinit var bottomSheet : RelativeLayout
@@ -34,15 +38,26 @@ class DashboardFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        val searchViewModel =
+            ViewModelProvider(this).get(SearchViewModel::class.java)
+        _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding.root
         connectTeacher = root.findViewById(R.id.connect_teacher)
         bottomSheet = root.findViewById(R.id.bottom_sheet)
+
+        val editField:TextView = root.findViewById(R.id.search_field)
+
+        editField.setOnClickListener(View.OnClickListener {
+            val options: ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
+                context as Activity?,
+                Pair.create(root.findViewById(R.id.search_rel), "search_transition")
+            )
+            startActivity(Intent(context, SearchActivity::class.java), options.toBundle())
+        })
+
         setUpBottomSheet(root)
 
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
+        searchViewModel.text.observe(viewLifecycleOwner) {
            // textView.text = it
         }
         return root
@@ -76,8 +91,10 @@ class DashboardFragment : Fragment() {
 
         val dates = arrayOf(true, true, false, false, true, true)
 
-        val teacher = Teacher("Светлана Николаевна", "Учитель русского языка", "gr", 89963351058,
-            "Вы можете связаться со мной с 9 до 18 часов.", dates, 302)
+        val teacher = Teacher(
+            "Светлана Николаевна", "Учитель русского языка", "gr", 89963351058,
+            "Вы можете связаться со мной с 9 до 18 часов.", dates, 302, "русский язык", ""
+        )
 
         setUpTeacherSheet(teacher, bottomSheet)
 

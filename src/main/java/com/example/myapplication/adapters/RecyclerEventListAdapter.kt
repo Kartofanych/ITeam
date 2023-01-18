@@ -19,7 +19,7 @@ import com.example.myapplication.models.Event
 import com.example.myapplication.models.Post
 import me.relex.circleindicator.CircleIndicator
 
-class RecyclerEventListAdapter(eventList:MutableList<Event>, var context: Context)
+class RecyclerEventListAdapter(eventList:ArrayList<Event>, var context: Context)
     : RecyclerView.Adapter<RecyclerEventListAdapter.ViewHolder>() {
 
 
@@ -50,11 +50,11 @@ class RecyclerEventListAdapter(eventList:MutableList<Event>, var context: Contex
             intentToEventProfile.putExtra("event_name", event.title)
             intentToEventProfile.putExtra("event_info", event.info)
             intentToEventProfile.putExtra("event_imageUrl", event.imageUrl)
+            intentToEventProfile.putExtra("activity", "close_events")
 
             val options: ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                 context as Activity?,
                 Pair.create(holder.itemView, "event_transition")
-
             )
             context.startActivity(intentToEventProfile, options.toBundle())
         })

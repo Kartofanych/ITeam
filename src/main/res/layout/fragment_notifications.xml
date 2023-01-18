@@ -7,11 +7,58 @@
     tools:context=".ui.notifications.NotificationsFragment">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rel_first"
-        >
+        android:id="@+id/rel_first">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:lottie_rawRes="@raw/wave"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_alignParentEnd="true"
+            android:scaleY="4"
+            android:scaleX="4"
 
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_second"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/element_edit_field"
+        android:backgroundTint="@color/white"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
+        >
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Скоро..."
+            android:fontFamily="@font/bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+        <RelativeLayout
+            android:id="@+id/text_under_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_title"
+            android:layout_marginTop="20dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/carousel_future_events"
+                />
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

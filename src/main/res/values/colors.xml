@@ -23,4 +23,6 @@
     <color name="blue_main">#33357d</color>
     <color name="blue_second">#a0a1c1</color>
     <color name="hint_color">#9c9eb2</color>
+    <color name="blue_sport">#36bec3</color>
+    <color name="orange_olympiads">#fc7447</color>
 </resources>

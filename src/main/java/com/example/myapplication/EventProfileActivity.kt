@@ -1,10 +1,12 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import com.bumptech.glide.Glide
@@ -25,6 +27,8 @@ class EventProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_event_profile)
 
         options = intent.extras!!
+
+
         init()
 
 
@@ -48,7 +52,7 @@ class EventProfileActivity : AppCompatActivity() {
             .into(image)
 
         back.setOnClickListener(View.OnClickListener {
-
+            onBackPressed()
         })
 
         comeButton.disableWithAnimation()
@@ -62,6 +66,13 @@ class EventProfileActivity : AppCompatActivity() {
                 //comeButton.background = pressed
             }
         })
+
+    }
+
+    override fun onBackPressed() {
+        val rel:RelativeLayout = findViewById(R.id.animate_rel)
+        rel.transitionName = "hey"
+        super.onBackPressed()
 
     }
 }
