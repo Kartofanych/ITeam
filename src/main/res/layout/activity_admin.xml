@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_hogwarts_3"
+        android:scaleType="centerCrop"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black"
+        android:backgroundTint="#4E4F80"
+        android:alpha="1"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/create_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создать событие"
+            android:textSize="22dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/gradient_colorful_button"
+            android:textColor="@color/white"
+            android:fontFamily="@font/semibold"
+
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/create_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить учителя"
+            android:textSize="22dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/gradient_colorful_button"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/create_event"
+            android:fontFamily="@font/semibold"
+
+            />
+
+        <TextView
+            android:id="@+id/create_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить Клуб"
+            android:textSize="22dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/gradient_colorful_button"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/create_teacher"
+            android:fontFamily="@font/semibold"
+
+            />
+
+        <TextView
+            android:id="@+id/create_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить новость"
+            android:textSize="22dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/gradient_colorful_button"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/create_club"
+            android:fontFamily="@font/semibold"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

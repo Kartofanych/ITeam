@@ -28,6 +28,7 @@ class NavigationActivity : AppCompatActivity() {
         popupMenu.inflate(R.menu.bottom_nav_menu)
         val menu = popupMenu.menu
         binding.navView.setupWithNavController(menu, navController)
+
     }
 
 }

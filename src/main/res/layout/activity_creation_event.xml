@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreationEventActivity"
+    android:paddingHorizontal="20dp">
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Создать событие"
+        android:fontFamily="@font/semibold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+
+
+        />
+    
+    <EditText
+        android:id="@+id/event_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/element_edit_field"
+        android:backgroundTint="@color/purple"
+        android:hint="name"
+        android:fontFamily="@font/semibold"
+        android:paddingHorizontal="10dp"
+        android:textColorHint="@color/hint_color"
+        android:textColor="@color/white"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/event_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_name"
+        android:background="@drawable/element_edit_field"
+        android:backgroundTint="@color/purple"
+        android:layout_marginTop="20dp"
+        android:minHeight="50dp"
+        android:fontFamily="@font/semibold"
+        android:hint="info"
+        android:textColorHint="@color/hint_color"
+        android:textColor="@color/white"
+
+        android:paddingHorizontal="10dp"
+        />
+
+    <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+        android:id="@+id/event_date"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/event_info"
+        app:picker_itemSpacing="6dp"
+        app:picker_curvedMaxAngle="45"
+        app:picker_curved="true"
+        app:picker_selectorColor="@color/purple"
+        app:picker_stepSizeHours="1"
+        app:picker_stepSizeMinutes="15"
+        app:picker_cyclic="false"
+        app:picker_dayCount="31"
+        app:picker_mustBeOnFuture="true"
+        app:picker_visibleItemCount="3"
+        app:picker_textColor="@color/white"
+        app:picker_selectedTextColor="@color/white"
+        android:background="@drawable/element_edit_field"
+        android:backgroundTint="@color/purple"
+        app:fontFamily="@font/semibold"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/event_date"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/purple"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/event_add_image"
+            android:src="@drawable/icon_add_image"
+            app:tint="@color/purple_200"
+            android:padding="20dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/create_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создать"
+        android:textSize="22dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/gradient_colorful_button"
+        android:textColor="@color/white"
+        android:fontFamily="@font/semibold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+
+
+        />
+
+
+
+
+</RelativeLayout>

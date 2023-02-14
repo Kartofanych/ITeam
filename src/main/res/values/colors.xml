@@ -21,8 +21,11 @@
     <color name="background_black">#000119</color>
     <color name="dark_blue">#012a77</color>
     <color name="blue_main">#33357d</color>
+    <color name="blue_nice">#FF4E4F80</color>
+    <color name="blue_it">#0160a2</color>
     <color name="blue_second">#a0a1c1</color>
     <color name="hint_color">#9c9eb2</color>
     <color name="blue_sport">#36bec3</color>
     <color name="orange_olympiads">#fc7447</color>
+    <color name="gradient_grey">#8384B5</color>
 </resources>

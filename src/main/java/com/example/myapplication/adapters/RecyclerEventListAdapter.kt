@@ -11,15 +11,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
 import com.example.myapplication.EventProfileActivity
 import com.example.myapplication.R
 import com.example.myapplication.models.Event
 import com.example.myapplication.models.Post
+import com.google.gson.Gson
 import me.relex.circleindicator.CircleIndicator
 
-class RecyclerEventListAdapter(eventList:ArrayList<Event>, var context: Context)
+class RecyclerEventListAdapter(eventList: ArrayList<Event>, var context: Context)
     : RecyclerView.Adapter<RecyclerEventListAdapter.ViewHolder>() {
 
 
@@ -45,12 +45,14 @@ class RecyclerEventListAdapter(eventList:ArrayList<Event>, var context: Context)
             .load(event.imageUrl)
             .into(holder.imageView)
 
+        holder.date.text = event.date.toString()
+
         holder.itemView.setOnClickListener(View.OnClickListener {
             val intentToEventProfile = Intent(context, EventProfileActivity::class.java)
-            intentToEventProfile.putExtra("event_name", event.title)
-            intentToEventProfile.putExtra("event_info", event.info)
-            intentToEventProfile.putExtra("event_imageUrl", event.imageUrl)
-            intentToEventProfile.putExtra("activity", "close_events")
+
+            val gson = Gson()
+            val jsonString = gson.toJson(event)
+            intentToEventProfile.putExtra("event", jsonString)
 
             val options: ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                 context as Activity?,

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/icon_icon"
+            android:textSize="22dp"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp"
+            android:layout_above="@+id/cards"
+            />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/icon_background_bottom"
+            app:tint="#165FF1" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/icon_background_center"
+            app:tint="#165FF1" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/icon_background_center"
+            app:tint="#165FF1" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="40dp"
+
+            android:src="@drawable/icon_background_center"
+            app:tint="#165FF1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/contin"
+        android:layout_marginBottom="50dp"
+        >
+        
+
+
+            <RelativeLayout
+                android:id="@+id/card_student"
+                android:layout_width="130dp"
+                android:layout_height="180dp"
+                android:background="@drawable/element_image_solid_corners_touched"
+                android:tag="clicked"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="10dp">
+
+                    <ImageView
+                        android:id="@+id/student_image"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_student_"
+                        android:layout_centerHorizontal="true"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/student_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/student_image"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Ученик"
+                        android:textColor="@color/blue_main"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/card_admin"
+            android:layout_width="130dp"
+            android:layout_height="180dp"
+            android:background="@drawable/element_edit_field"
+            android:tag="null"
+            android:layout_toEndOf="@+id/card_student"
+            android:layout_marginStart="40dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="20dp"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/admin_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_admin"
+
+                    />
+
+                <TextView
+                    android:id="@+id/admin_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/admin_image"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Редактор"
+                    android:textColor="@color/background_black"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/contin"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/element_edit_field"
+        android:textColor="@color/white"
+        android:fontFamily="@font/semibold"
+        android:text="Продолжить"
+        android:gravity="center"
+        android:backgroundTint="@color/blue_it"
+
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest"
+        android:textSize="22dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/gradient_colorful_button"
+        android:textColor="@color/white"
+        android:fontFamily="@font/semibold"
+        android:layout_above="@id/admin"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+
+
+        />
+
+    <TextView
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textSize="22dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient_colorful_button"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/semibold"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
